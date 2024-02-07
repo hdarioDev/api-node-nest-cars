@@ -52,4 +52,9 @@ export class CarsService {
     };
     return this.cars[index];
   }
+
+  delete(id: string) {
+    this.findByOneId(id);
+    this.cars = this.cars.filter((car) => car.id !== id);
+  }
 }
